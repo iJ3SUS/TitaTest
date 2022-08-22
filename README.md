@@ -1,8 +1,7 @@
-# Test Project
 
-Clonar el proyecto
-Ejecutar: npm install
-ejecutar: npm start
+# Clonar el proyecto
+# Ejecutar: npm install
+# ejecutar: npm start
 
 
 
