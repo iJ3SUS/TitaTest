@@ -25,20 +25,24 @@ function Navbar() {
 
     useEffect(() => {
 
+        window.onload = () => {
 
-        const google = window.google
+            const google = window.google
 
-        google.accounts.id.initialize({
-            client_id: '725035071849-31313t24r5k28jo5mndnvcf2m0q7rv22.apps.googleusercontent.com',
-            callback: handleResponse
-        })
+            google.accounts.id.initialize({
+                client_id: '725035071849-31313t24r5k28jo5mndnvcf2m0q7rv22.apps.googleusercontent.com',
+                callback: handleResponse
+            })
 
-        google.accounts.id.renderButton(
-            document.getElementById('google'),
-            { theme: 'outline'}
-        )
+            google.accounts.id.prompt()
+    
+            google.accounts.id.renderButton(
+                document.getElementById('google'),
+                { theme: 'outline'}
+            )
 
-
+        }
+  
     }, [])
 
 
